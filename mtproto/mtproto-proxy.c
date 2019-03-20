@@ -837,7 +837,7 @@ int process_client_packet (struct tl_in_state *tlio_in, int op, connection_job_t
 
   switch (op) {
   case RPC_PONG:
-    return 1;
+     break;
   case RPC_PROXY_ANS:
     if (len >= 16) {
       int flags = tl_fetch_int ();
@@ -2171,10 +2171,7 @@ int f_parse_option (int val) {
     assert (workers >= 0 && workers <= MAX_WORKERS);
     break;
   case 'T':
-    ping_interval = atof (optarg);
-    if (ping_interval <= 0) {
-      ping_interval = PING_INTERVAL;
-    }
+   
     break;
   case 2000:
     engine_set_http_fallback (&ct_http_server, &http_methods_stats);
