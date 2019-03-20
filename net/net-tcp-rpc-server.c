@@ -102,12 +102,7 @@ int tcp_rpcs_default_execute (connection_job_t C, int op, struct raw_message *ra
 
   vkprintf (3, "%s: fd=%d, op=%d, len=%d\n", __func__, c->fd, op, raw->total_bytes);
   if (op == RPC_PING && raw->total_bytes == 12) {
-    c->last_response_time = precise_now;    
-    int P[3];
-    assert (rwm_fetch_data (raw, P, 12) == 12);
-    P[0] = RPC_PONG;    
-    vkprintf (3, "received ping from " IP_PRINT_STR ":%d (val = %lld)\n", IP_TO_PRINT (c->remote_ip), (int)c->remote_port, *(long long *)(P + 1));
-    tcp_rpc_conn_send_data (JOB_REF_CREATE_PASS (C), 12, P);
+ 
     return 0;
   }
   return 0;
