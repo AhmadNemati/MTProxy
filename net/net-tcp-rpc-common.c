@@ -228,10 +228,7 @@ int tcp_rpc_flush (connection_job_t C) {
 }
 
 void tcp_rpc_send_ping (connection_job_t C, long long ping_id) {
-  int P[3];
-  P[0] = RPC_PING;
-  *(long long *)(P + 1) = ping_id;
-  tcp_rpc_conn_send_data (JOB_REF_CREATE_PASS (C), 12, P);
+  
 }
 
 static unsigned default_rpc_flags = 0;
