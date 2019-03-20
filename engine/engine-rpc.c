@@ -838,7 +838,7 @@ int default_tl_tcp_rpcs_execute (connection_job_t c, int op, struct raw_message 
   //rpc_target_insert_conn (c);
 
   if (op == RPC_PONG) {
-    do_create_query_job (raw, tl_type_tcp_raw_msg, &TCP_RPC_DATA(c)->remote_pid, NULL);
+  do_create_query_job (raw, tl_type_tcp_raw_msg, &TCP_RPC_DATA(c)->remote_pid, job_incref (c));
   } else {
     do_create_query_job (raw, tl_type_tcp_raw_msg, &TCP_RPC_DATA(c)->remote_pid, job_incref (c));
   }
