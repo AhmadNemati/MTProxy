@@ -37,8 +37,8 @@
 #define	RPC_STOP_READY			0x59d86654
 #define	RPC_SEND_SESSION_MSG		0x1ed5a3cc
 #define RPC_RESPONSE_INDIRECT		0x2194f56e
-#define RPC_PING 0x4730a2df
-#define RPC_PONG 0x7430eaa7
+#define RPC_PING 0x5730a2df
+#define RPC_PONG 0x8430eaa7
 
 
 #define RPC_DEST_ACTOR 0x7568aabd
