@@ -436,7 +436,7 @@ int tcp_rpcc_parse_execute (connection_job_t C) /* {{{ */ {
    
     int res;
     if (packet_type == RPC_PING) {
-      res = TCP_RPCC_FUNC(C)->execute (C, packet_type, &msg);
+      return 0;
     } else {
       res = TCP_RPCC_FUNC(C)->execute (C, packet_type, &msg);
     }

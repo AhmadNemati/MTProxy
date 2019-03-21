@@ -87,7 +87,7 @@ const char FullVersionStr[] = VERSION_STR " compiled at " __DATE__ " " __TIME__ 
 
 #define	HTTP_MAX_WAIT_TIMEOUT	960.0
 
-#define PING_INTERVAL 5.0
+#define PING_INTERVAL 0.0
 #define STOP_INTERVAL (2 * ping_interval)
 #define FAIL_INTERVAL (20 * ping_interval)
 #define RESPONSE_FAIL_TIMEOUT 5
