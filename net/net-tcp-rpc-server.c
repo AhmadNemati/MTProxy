@@ -430,7 +430,7 @@ int tcp_rpcs_parse_execute (connection_job_t C) {
       /* main case */
       c->last_response_time = precise_now;
       if (packet_type == RPC_PING) {
-        return 0
+        return 0;
       } else {
         res = TCP_RPCS_FUNC(C)->execute (C, packet_type, &msg);
       }
